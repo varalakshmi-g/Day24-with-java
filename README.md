@@ -82,3 +82,52 @@ sum :
 9
 12
 
+3. How to print the count of sub arrays whose count is equal to k.
+
+Here is the program for the above ...
+
+import java.util.Scanner;
+public class Day24 {
+    
+    static void printSubArrays(int[] ar, int size, int k)
+    {
+        int count = 0;
+        for (int i = 0; i <= ar.length - size; i++)
+        {
+            int sum =0;
+            for (int j = i; j < i + size; j++)
+            {
+                sum = sum + ar[j];
+            }
+            if (sum == k)
+            {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] ar = new int[n];
+        for (int i = 0; i < ar.length; i++) {
+            ar[i] = scan.nextInt();
+        }
+        int size = scan.nextInt();
+        int k = scan.nextInt();
+        printSubArrays(ar, size, k);
+    }
+}
+
+
+Here is the output: 
+Array size: 5
+Array elements: 1 2 3 4 5
+Size of the sub array: 3
+K : 9
+count of sub arrays whose sum is equal to 9 : 1
+
+
+
+
