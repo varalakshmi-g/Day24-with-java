@@ -1,5 +1,6 @@
 # Day24-with-java
-Today I practiced how to print sub arrays with size of 3. 
+Today I practiced 
+1. How to print sub arrays with size of 3. 
 Here is the java program ...
 
 import java.util.Scanner;
@@ -39,4 +40,45 @@ Subarray :
 (1 2 3)
 (2 3 4)
 (3 4 5)
+
+2. How to print the sum of sub arrays with the given size.
+
+Here is the program to print sum of sub arrays
+
+import java.util.Scanner;
+public class Day24 {
+    
+    static void printSubArraysSum(int[] ar, int size)
+    {
+        for (int i = 0; i <= ar.length - size; i++)
+        {
+            int sum =0;
+            for (int j = i; j < i + size; j++)
+            {
+                sum = sum + ar[j];
+            }
+            System.out.println(sum);
+        }
+    }
+    
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int[] ar = new int[n];
+        for (int i = 0; i < ar.length; i++) {
+            ar[i] = scan.nextInt();
+        }
+        int size = scan.nextInt();
+        printSubArraysSum(ar, size);
+    }
+}
+
+Here is the output: 
+Array size: 5
+Array elements: 1 2 3 4 5
+Size of the sub array: 3
+sum :
+6
+9
+12
 
