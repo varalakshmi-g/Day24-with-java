@@ -1,9 +1,9 @@
 # Day24-with-java
-Today I practiced how to print sub arrays with 
+Today I practiced how to print sub arrays with size of 3. 
+Here is the java program ...
 
 import java.util.Scanner;
-public class Day24 {
-    
+public class Day24 {    
     static void printSubArrays(int[] ar, int size)
     {
         for (int i = 0; i <= ar.length - size; i++)
@@ -15,7 +15,6 @@ public class Day24 {
             System.out.println();
         }
     }
-    
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
